@@ -4,14 +4,12 @@
   become: true
   connection: ssh
   tasks: 
-     - name: Install httpd web server on Host Machines
-       action: yum pkg=httpd state=present
-
      - name: Start httpd server on Host Machines
        action: service name=httpd state=started
-
-     - name: Stop httpd server on Host Machines
-       action: service name=httpd state=stopped
-
-     - name: Retart httpd server on Host Machines
-       action: service name=httpd state=restarted
+      
+     - name: Clone Flipkart Clone repo
+       git:
+          repo: https://github.com/Msocial123/Flipkart-Clone.git
+          dest: index.html
+          version: main
+          force: yes
