@@ -19,6 +19,3 @@
 
      - name: Restart the Docker Server on Host Machines
        action: service pkg=docker state=restarted
-       
-
-          
