@@ -1,7 +1,7 @@
 ---
 - name: Install and Configure Docker
   hosts: webservers
-  #remote_user: ansible
+  remote_user: ansible
   connection: ssh
   become: yes
 
