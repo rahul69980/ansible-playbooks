@@ -4,7 +4,7 @@
   become: yes 
   connection: ssh 
   tasks: 
-    - name: I want to Install git in Host Machines
+    - name: I want to Install git,python,java in Host Machines
       action: yum pkg='{{item}}' state=present 
       loop:
         - git
