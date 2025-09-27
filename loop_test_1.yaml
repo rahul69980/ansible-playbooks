@@ -6,7 +6,7 @@
   tasks: 
     - name: I want to Install git in Host Machines
       action: yum pkg='{{item}}' state=present 
-      with_items:
+      loop:
         - git
         - python3
         - java-17-amazon-corretto.x86_64
