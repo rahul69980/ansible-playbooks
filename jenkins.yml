@@ -19,6 +19,12 @@
       rpm_key:
         key: https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
         state: present
+        
+    - name: Install Epel Release
+      yum:
+        name: http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+        state: present
+        disable_gpg_check: true
  
     - name: Install Jenkins
       yum:
